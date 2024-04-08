@@ -1,0 +1,61 @@
+[
+    {
+        "titulo": "Inicio",
+        "descripcion": "",
+        "utilidades": [
+            "- ",
+            "- ",
+            "- ",
+            "- "
+        ]
+    },
+    {
+        "titulo": "Juego - Random Quiz",
+        "descripcion": "Sección de visualización del juego y la funcionalidad para guardar y registrar los puntajes obtenidos por los jugadores.",
+        "utilidades": [
+            "Características de la sección: ",
+            "- Obtención de los datos para las preguntas.",
+            "- Las preguntas se muestran de forma aleatoria.",
+            "- Resaltado de respuestas correctas e incorrectas.",
+            "- Registro de puntuación.",
+            "- Registro de fallos.",
+            "- Visualización de las preguntas totales.",
+            "- Guardado de puntaje por nombre.",
+            "- Verificación de que exista un nombre para guardar.",
+            "- Opción de reiniciar el juego."
+        ]
+    },
+    {
+        "titulo": "Crear Preguntas",
+        "descripcion": "Proceso de creación y almacenamiento de preguntas destinadas a ser utilizadas durante el transcurso del juego.",
+        "utilidades": [
+            "Características de la sección: ",
+            "- Creacion y almacenamiento en la base de datos.",
+            "- Verificación explícita de la respuesta correcta antes de guardar la pregunta.",
+            "-  Confirmación mediante un mensaje de que la pregunta se ha guardado exitosamente en la base de datos."
+        ]
+    },
+    {
+        "titulo": "Preguntas disponibles",
+        "descripcion": "Visualización de las preguntas almacenadas en la base de datos. Las preguntas deben haber sido previamente creadas en la sección 'Crear' para aparecer aquí.",
+        "utilidades": [
+            "Características de la sección: ",
+            "- Diseño adaptable.",
+            "- Visualización de las preguntas disponibles.",
+            "- Capacidad para eliminar preguntas seleccionadas."
+        ]
+    },
+    {
+        "titulo": "Record de Jugadores",
+        "descripcion": "Sección donde se muestra una lista limitada de los mejores jugadores, estos deben ser guardados previamente en la sección 'Comenzar' cuando finaliza el juego.",
+        "utilidades": [
+            "Características de la sección: ",
+            "- Diseño adaptable.",
+            "- Orden de aparición según el puntaje obtenido.",
+            "- Si hay puntajes iguales, se ordenan por fecha de juego.",
+            "- Límite de los mejores 15 jugadores.",
+            "- Una vez superado el limite en la base de datos, se eliminan los de menor puntaje.",
+            "- Logo representativo del nombre, con su inicial en mayúscula."
+        ]
+    }
+]
