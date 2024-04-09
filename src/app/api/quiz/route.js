@@ -13,7 +13,7 @@ export async function POST(request){
 }
 export async function GET(){
     await connectDB();
-    const res = await user.find();
+    const res = await quiz.find();
     const data = JSON.parse(JSON.stringify(res));
     return data;
 }
