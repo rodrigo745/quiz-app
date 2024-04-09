@@ -11,6 +11,12 @@ export async function POST(request){
     console.log(pregunta);
     return NextResponse.json(pregunta);
 }
+export async function GET(){
+    await connectDB();
+    const res = await user.find();
+    const data = JSON.parse(JSON.stringify(res));
+    return data;
+}
 
 // export async function DELETE(res, { params }) {
 //     await connectDB();

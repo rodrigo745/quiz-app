@@ -1,22 +1,12 @@
-import { connectDB } from "@/libs/mongoose";
-import quiz from "@/models/quiz";
-
+import { GET } from "@/app/api/quiz/route";
 import Link from "next/link";
 import DeleteCard from "@/components/DeleteCard";
 import ModalExplicacion from "@/components/ModalExplicacion";
 
-
-async function LoadQuiz(){
-    await connectDB();
-    const res = await quiz.find();
-    const resDos = await JSON.parse(JSON.stringify(res));
-    return resDos;
-}
-
 export default async function ShowQuiz(){
     
-    const data = await LoadQuiz();    
-    console.log(data);
+    const data = await GET();
+
     return(
         <div className="flex flex-col mt-20 mb-20 justify-center align-middle">
             <h2 className="text-center text-2xl">Todas las preguntas</h2>
