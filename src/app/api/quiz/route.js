@@ -2,13 +2,6 @@ import { connectDB } from "@/libs/mongoose";
 import quiz from "@/models/quiz";
 import { NextResponse } from "next/server";
 
-export async function GET(){
-    await connectDB();
-    const datos = await quiz.find();
-    const dataParse = JSON.parse(JSON.stringify(datos))
-    return dataParse;
-}
-
 export async function POST(request){
     await connectDB();
 

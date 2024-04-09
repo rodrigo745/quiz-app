@@ -1,11 +1,20 @@
+import { connectDB } from "@/libs/mongoose";
+import user from "@/models/user";
+
 import Link from "next/link"
-import { GET } from "@/app/api/user/route";
 import ShowIdRecord from "@/app/api/user/[id]/page";
 import ModalExplicacion from "@/components/ModalExplicacion";
 
+async function LoadUsers(){
+    await connectDB();
+    const res = await user.find();
+    const resDos = await JSON.parse(JSON.stringify(res));
+    return resDos;
+}
+
 export default async function ShowRecord(){
 
-    let datos = await GET();
+    let datos = await LoadUsers();
 
     datos = datos.sort((a,b)=> b.puntos - a.puntos )
 

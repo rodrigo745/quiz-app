@@ -1,11 +1,20 @@
+import { connectDB } from "@/libs/mongoose";
+import quiz from "@/models/quiz";
+
 import Link from "next/link"
 import CardQuiz from "@/components/CardQuiz";
-import { GET } from "@/app/api/quiz/route";
 import ModalExplicacion from "@/components/ModalExplicacion";
+
+async function LoadQuiz(){
+    await connectDB();
+    const res = await quiz.find();
+    const resDos = await JSON.parse(JSON.stringify(res));
+    return resDos;
+}
 
 export default async function StartGame(){
 
-    const data = await GET();
+    const data = await LoadQuiz();
 
     return(
         <div className="flex flex-col h-screen justify-center items-center">

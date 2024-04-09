@@ -8,6 +8,4 @@ const esquema2 = new Schema({
     correcta: Number
 })
 
-export default mongoose.models.Quiz2 || mongoose.model("Quiz2", esquema2);
-
-
+export default mongoose.models.quizzes || mongoose.model("quizzes", esquema2);

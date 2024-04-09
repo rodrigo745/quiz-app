@@ -7,4 +7,4 @@ const schema = new Schema({
     fallas: Number
 });
 
-export default mongoose.models.User || mongoose.model("User", schema);
+export default mongoose.models.users || mongoose.model("users", schema);
