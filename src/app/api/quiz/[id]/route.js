@@ -9,5 +9,3 @@ export async function DELETE(res, { params }) {
     } catch (error) {
     }
 }
-
-
