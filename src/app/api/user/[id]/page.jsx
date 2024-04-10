@@ -11,10 +11,7 @@ export default async function ShowIdRecord(props){
             });
             console.log(res)
         }
-    }
-    
-
-    
+    }    
     return(
         <div></div>
     )
