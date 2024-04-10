@@ -2,7 +2,6 @@ import { connectDB } from "@/libs/mongoose";
 import user from "@/models/user";
 
 import Link from "next/link"
-import ShowIdRecord from "@/app/api/user/[id]/page";
 import ModalExplicacion from "@/components/ModalExplicacion";
 
 async function LoadUsers(){
@@ -13,8 +12,18 @@ async function LoadUsers(){
 }
 
 export default async function ShowRecord(){
-
+    
     let datos = await LoadUsers();
+    
+    const url = `${process.env.ENLACE_URL}/api/user`;
+
+    if(datos.length > 15){
+        for(let i = 15; i < datos.length; i++){
+            const res = await fetch(`${url}/${datos[i]._id}`,{
+                method: "DELETE"
+            });
+        }
+    }    
 
     datos = datos.sort((a,b)=> b.puntos - a.puntos )
 
@@ -42,8 +51,7 @@ export default async function ShowRecord(){
                 ))
                 }
             </div>
-            <Link className="btnVolver" href="/">Volver al inicio</Link>   
-            <ShowIdRecord datos={datos} /> 
+            <Link className="btnVolver" href="/">Volver al inicio</Link>
             <ModalExplicacion pageJson="4" />
         </div>
     )
