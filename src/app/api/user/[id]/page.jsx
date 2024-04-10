@@ -9,7 +9,6 @@ export default async function ShowIdRecord(props){
             const res = await fetch(`${url}/${datos[i]._id}`,{
                 method: "DELETE"
             });
-            console.log(res)
         }
     }    
     return(

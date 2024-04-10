@@ -25,7 +25,7 @@ export default function CreateQuiz(){
             correcta: correcta
         }
         if(errorBool){
-            await fetch("../api/quiz", {
+            await fetch("../api/quiz/[id]/", {
                 method: "POST",
                 body: JSON.stringify(datos),
                 headers: {

@@ -23,7 +23,7 @@ export default function SaveRecord(props){
                 fallas: incorrectas
             }
             if(nombre != "" && nombre.length > 2){
-                await fetch("../api/user", {
+                await fetch("../api/user/[id]/", {
                     method: "POST",
                     body: JSON.stringify(datos),
                     headers: {

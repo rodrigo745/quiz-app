@@ -1,4 +1,4 @@
-import { GET } from "@/app/api/quiz/route";
+import { GET } from "@/app/api/quiz/[id]/route";
 import Link from "next/link";
 import DeleteCard from "@/components/DeleteCard";
 import ModalExplicacion from "@/components/ModalExplicacion";
