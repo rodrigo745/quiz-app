@@ -10,12 +10,13 @@ export default function SaveRecord(props){
     const [ modal, setModal ] = useState(false);
     const [ nombre, setNombre ] = useState("");
     const [ mensaje, setMensaje ] = useState("Esperando...");
+    const [ guardar, setGuardar ] = useState(true);
     const router = useRouter();
     let datos = {};
 
     const mostrarModal = async(e)=>{
         e.preventDefault();
-        if(modal){
+        if(modal && guardar){
             datos = {
                 nombre: nombre,
                 puntos: correctas,
@@ -35,6 +36,7 @@ export default function SaveRecord(props){
                 router.refresh();
                 await new Promise((resolve)=>{ setTimeout(resolve, 1200)});
                 modal ? setModal(false) : setModal(true);
+                setGuardar(false);
                 setMensaje("Esperando...")
             } else {
                 setMensaje("El nombre debe tener mas de dos letras")
@@ -62,8 +64,8 @@ export default function SaveRecord(props){
                         <input onChange={cambios} className="input p-2" placeholder="Ej: Rodrigo"/>
                         <h2 className="mensaje pt-2 text-gray-400"> {mensaje} </h2>
                         <div className="flex justify-evenly mt-1">
-                            <button className="border  rounded-md border-cyan-400 p-2 px-4 mt-2 hover:bg-cyan-500 hover:text-black">Guardar</button>
                             <button onClick={cancelar} className="border rounded-md border-cyan-400 p-2 px-4 mt-2 hover:bg-cyan-500 hover:text-black">Cancelar</button>
+                            <button className="border  rounded-md border-cyan-400 p-2 px-4 mt-2 hover:bg-cyan-500 hover:text-black">Guardar</button>
                         </div>
                     </div>
                 </form>

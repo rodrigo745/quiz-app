@@ -22,6 +22,7 @@
             "- Visualización de las preguntas totales.",
             "- Guardado de puntaje por nombre.",
             "- Verificación de que exista un nombre para guardar.",
+            "- Solo se permite guardar una vez por juego.",
             "- Opción de reiniciar el juego."
         ]
     },
