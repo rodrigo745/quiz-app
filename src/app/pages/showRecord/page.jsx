@@ -16,12 +16,11 @@ async function LoadUsers(){
 export default async function ShowRecord(){
     
     let datos = await LoadUsers();
-    
-    const url = `${process.env.ENLACE_URL}/api/user`;
+    const url = "http://localhost:3000";
 
     if(datos.length > 15){
         for(let i = 15; i < datos.length; i++){
-            const res = await fetch(`${url}/${datos[i]._id}`,{
+            const res = await fetch(`${url}/api/user/${datos[i]._id}`,{
                 method: "DELETE"
             });
         }
