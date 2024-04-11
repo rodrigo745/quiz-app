@@ -11,7 +11,6 @@ export async function POST(request){
     const data = await request.json();
     const pregunta = await quiz.create(data);
 
-    console.log(pregunta);
     return NextResponse.json(pregunta);
 }
 

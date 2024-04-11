@@ -76,7 +76,6 @@ export default function CardQuiz(props){
         if(data.length == undefined || data.length == 0 || data.empty == true){
             setMostrarVariante(false);
         } else{
-            console.log("2")
             setMostrarVariante(true);
         }
     }, [data]);
@@ -105,7 +104,6 @@ export default function CardQuiz(props){
                     </div>
                     : 
                     <div className="text-center">
-                        
                         <SaveRecord cantidad={respaldo.length} correctas={cont} incorrectas={contFail}/>
                         <button className="border rounded-md border-cyan-400 p-2 px-4 mt-4 hover:bg-cyan-500 hover:text-black" onClick={gameAgain}>Volver a jugar</button>
                     </div>   
@@ -116,6 +114,5 @@ export default function CardQuiz(props){
                 <div>Sin datoss</div>
             }
         </div>
-       
     )
 }

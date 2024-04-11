@@ -10,15 +10,6 @@ export default function ModalExplicacion(props){
     const quitarModal = (e)=>{
         e.preventDefault();
         mostrar ? setMostrar(false) : setMostrar(true);
-        
-        // datos del modal
-        console.log(explicacion[pageJson].titulo)
-
-        switch(pageJson){}
-        /* 
-        - pasar un numero desde cada pagina hacia aqui como props
-        - filtrar el numero y mostrar lo correspondiente a el
-        */
     }
 
     return(

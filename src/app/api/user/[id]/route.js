@@ -4,7 +4,6 @@ import { NextResponse } from "next/server";
 
 export const dynamic = "force-dinamyc";
 
-
 export async function DELETE(res, {params}){
     try {
         const result = await user.deleteOne({_id: params.id});
@@ -23,6 +22,5 @@ export async function POST(request){
 
     const data = await request.json()
     const res = await user.create(data);
-    console.log(res);
     return NextResponse.json(res);
 }
