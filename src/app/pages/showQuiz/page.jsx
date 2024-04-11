@@ -21,9 +21,9 @@ export default async function ShowQuiz(){
                             <div key={e._id} className={containerStyle}>
                                 <div>
                                     <h5 className={h5Style}>{e.pregunta}</h5>
-                                    <p className={pStyle}>1)_ {e.opcionUno}</p>
-                                    <p className={pStyle}>2)_ {e.opcionDos}</p>
-                                    <p className={pStyle}>3)_ {e.opcionTres}</p>
+                                    <p className={pStyle}>1 )_ {e.opcionUno}</p>
+                                    <p className={pStyle}>2 )_ {e.opcionDos}</p>
+                                    <p className={pStyle}>3 )_ {e.opcionTres}</p>
                                 </div>
                                 <div className={containerEndStyle}>
                                     <p className={pistaStyle}>Correcta: {e.correcta}</p>
@@ -43,6 +43,6 @@ export default async function ShowQuiz(){
 // Estilos...
 const containerStyle = "flex flex-col justify-between max-w-md p-4 rounded-lg shadow cardShow";
 const h5Style = "mb-2 text-xl font-bold tracking-tight";
-const pStyle = "font-normal";
+const pStyle = "font-normal mt-2";
 const containerEndStyle = "flex justify-between mt-4";
 const pistaStyle = "bg-green-500 p-1 px-3 rounded-md text-white";

@@ -7,7 +7,6 @@ import ModalExplicacion from "@/components/ModalExplicacion";
 
 export const dynamic = "force-dinamyc";
 
-
 async function LoadQuiz(){
     await connectDB();
     const res = await quiz.find();

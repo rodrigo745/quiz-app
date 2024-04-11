@@ -184,6 +184,7 @@ main{
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
   backdrop-filter: blur(4px);
   background-color: #00000050;
 }
@@ -191,7 +192,6 @@ main{
   background-color: #1a2c32;
   border-radius: 10px;
   position: sticky;
-  top: 30%;
   margin: auto;
 }
 .btnMostrarModal{
