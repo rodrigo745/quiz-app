@@ -3,6 +3,8 @@ import Link from "next/link";
 import DeleteCard from "@/components/DeleteCard";
 import ModalExplicacion from "@/components/ModalExplicacion";
 
+export const dynamic = "force-dinamyc";
+
 export default async function ShowQuiz(){
     
     const data = await GET();

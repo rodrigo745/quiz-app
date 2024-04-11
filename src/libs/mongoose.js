@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 let mongoClient; 
+export const dynamic = "force-dinamyc";
 
 export async function connectDB(){
     try{

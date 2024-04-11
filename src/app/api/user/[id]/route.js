@@ -2,6 +2,8 @@ import user from "@/models/user";
 import { connectDB } from "@/libs/mongoose";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dinamyc";
+
 
 export async function DELETE(res, {params}){
     try {

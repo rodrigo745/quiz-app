@@ -5,6 +5,9 @@ import Link from "next/link"
 import CardQuiz from "@/components/CardQuiz";
 import ModalExplicacion from "@/components/ModalExplicacion";
 
+export const dynamic = "force-dinamyc";
+
+
 async function LoadQuiz(){
     await connectDB();
     const res = await quiz.find();

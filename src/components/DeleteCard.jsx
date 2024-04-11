@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 export default function DeleteCard(props){
     const router = useRouter();
     let datos = props.llave;
-    let url = process.env.ENLACE_DATABASE;
     
     const borrar = async(e)=>{
         e.preventDefault();

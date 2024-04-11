@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+export const dynamic = "force-dinamyc";
+
 export default function Home() {
   return (
     <main className="flex justify-center content-center">

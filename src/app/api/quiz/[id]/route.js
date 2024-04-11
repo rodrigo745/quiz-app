@@ -3,6 +3,8 @@ import quiz from "@/models/quiz";
 import { NextResponse } from "next/server";
 import { connectDB } from "@/libs/mongoose";
 
+export const dynamic = "force-dinamyc";
+
 export async function POST(request){
     await connectDB();
 

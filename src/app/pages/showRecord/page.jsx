@@ -4,6 +4,8 @@ import user from "@/models/user";
 import Link from "next/link"
 import ModalExplicacion from "@/components/ModalExplicacion";
 
+export const dynamic = "force-dinamyc";
+
 async function LoadUsers(){
     await connectDB();
     const res = await user.find();
